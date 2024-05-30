@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&display=swap');
+:root{
+    --lightred: #DA291C;
+    --darkred: #AA291C;
+    --black: black;
+    --white: aliceblue;
+}
+/*This here makes the content of the page fill out the screen and also setting the font*/
+body, html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Sedan", sans-serif;
+    color: var(--white);
+}
+/*Here were set the style of the title and start button*/
+.Introduction{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    border-top: var(--lightred) solid;
+}
+.start-btn{
+    width: 7.5rem;
+    height: 3rem;
+    font-family: inherit;
+    border-color: var(--lightred);
+    letter-spacing: 0.08rem;
+    color: inherit;
+    background-color: var(--lightred);
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start{
+    text-decoration: none;
+}
+
+.start-btn:hover{
+    background-color: var(--darkred);
+}
+/*This sets the background image to be centred and covering the whole screen*/
+.homepage{
+    height: 100%;
+    width: 100%;
+    background :linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url(../images/manutdstadium.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
