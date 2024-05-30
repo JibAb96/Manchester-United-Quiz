@@ -38,6 +38,7 @@ body, html{
 }
 .start{
     text-decoration: none;
+    color: inherit;
 }
 
 .start-btn:hover{
@@ -53,3 +54,18 @@ body, html{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+/*This allows for the transition of the black screen giving the animation effect*/
+.transition-1 {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    z-index: 101;
+    background-color: var(--black);
+    transition: 0.5s ease-out;
+  }
+  .transition-1.is-active {
+    left: 0px;
+  }
