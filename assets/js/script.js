@@ -27,3 +27,7 @@ const quizData = [
         answer: "Portsmouth"
     }
 ]
+// This variable keeps count of the question that the user is currently on
+let currentQuestion = 0;
+// This variable keeps count of how many answers the user got correct
+let score = 0;
