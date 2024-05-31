@@ -25,5 +25,13 @@
                     </a>
             </div>
         </div>
+        <!--Javascript code for the the removal of black screen creating an animation effect. 
+            This allows for the background image to have time to load-->
+            <script>
+                const transition1_el = document.querySelector('.transition-1');
+                setTimeout(() => {
+                    transition1_el.classList.remove('is-active');
+                                  }, 500);
+            </script>
     </body>
 </html>
