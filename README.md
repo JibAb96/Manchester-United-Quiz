@@ -121,3 +121,8 @@ I opened the terminal in my code editor and changed the current working director
 <br>I also made sure that font-sizes and colors are readable.
 <br>I completed the quiz multiple times to get every possible score and also every selection combination inorder to find any errors.
 <hr>
+
+## Bugs
+I had no bugs when deploying the website as I kept previewing the page and fixing any mistakes such as typos and css problems.
+
+<hr>
