@@ -78,3 +78,17 @@ I've been careful to try to make this website as accessible as possible. I've do
 <li>By using colors that have strong contrast.</li>
 
 <hr>
+
+## Technologies Used
+
+I used HTML, CSS and Javascript to create this website.
+
+The programs I used include:
+<li>GitHub - To store files for the website,</li>
+<li>Git - for version control,</li>
+<li>Google fonts - To import the font I use on the website,</li>
+<li>Font Awesome - for the icons used on this website,</li>
+<li>Google Dev tools - To find and resolve issues with styling. Also used the Lighthouse feature,</li>
+<li>Am I Responsive - To show the website images on different sized devices.</li>
+
+<hr>
