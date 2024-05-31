@@ -54,6 +54,11 @@ body, html{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+/*Dark tint allowing contrast between background and content*/
+.background-tint{
+    background-color: rgba(0,0,0,.7);
+    background-blend-mode: multiply;
+}
 /*This allows for the transition of the black screen giving the animation effect*/
 .transition-1 {
     position: fixed;
