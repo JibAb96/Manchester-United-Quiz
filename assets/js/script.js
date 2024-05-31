@@ -31,3 +31,8 @@ const quizData = [
 let currentQuestion = 0;
 // This variable keeps count of how many answers the user got correct
 let score = 0;
+
+const transition2_el = document.querySelector('.transition-2');
+setTimeout(() => {
+   if(transition2_el){transition2_el.classList.remove('is-active')};
+                }, 500);
