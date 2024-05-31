@@ -92,3 +92,24 @@ The programs I used include:
 <li>Am I Responsive - To show the website images on different sized devices.</li>
 
 <hr>
+
+## Deployment & Local Deployment
+
+### Deploymment
+I used GitHub Pages to deploy the website. This is how I did it:
+<ol>
+<li>I logged in to GitHub.</li>
+<li>I went to the repository for this project, Golden Age Page.</li>
+<li>I went to the settings menu.</li>
+<li>I clicked on the Pages tab on the navigation bar.</li>
+<li>I found the Source section, then choose main from the drop down select branch menu. I then selected the Root from the drop down select folder menu.
+</li>
+<li>I then saved it and recieved a URL with the site deployed.</li>
+ </ol><a href="https://jibab96.github.io/MUQuiz/">Manchester United Fan Quiz</a>
+
+ ### Local Deployment
+Inorder to Fork the Manchester United Fan Quiz repository I logged into GitHub, then found the Manchester United Fan Quiz repository and then clicked on the Fork button.
+<br>For me to Clone the Manchester United Fan Quiz I logged in to GitHub, went to the repository for this project.
+I then clicked on the code button, selected whether I would like to clone with HTTPS, SSH or GitHub CLI and copied the link shown.
+I opened the terminal in my code editor and changed the current working directory to the location I wanted to use for the cloned directory. I then typed git clone into the terminal and then pasted the link I copied earlier. You need a http server installed.
+<hr>
