@@ -26,7 +26,7 @@ const quizData = [
         options: ["Arsenal", "Leyton Orient", "Chelsea", "Portsmouth"],
         answer: "Portsmouth"
     }
-]
+];
 // This variable keeps count of the question that the user is currently on
 let currentQuestion = 0;
 // This variable keeps count of how many answers the user got correct
@@ -35,31 +35,30 @@ let score = 0;
 This allows for the background image to have time to load*/
 const transition2_el = document.querySelector('.transition-2');
 setTimeout(() => {
-   if(transition2_el){transition2_el.classList.remove('is-active')};
+   if(transition2_el){transition2_el.classList.remove('is-active');}
                 }, 500);
 const transition3_el = document.querySelector('.transition-3');
 setTimeout(() => {
     transition3_el.classList.remove('is-active');
                 }, 500);
-
 // This is the function which fills in the question and option container with data from the quizData array
 const presentQuestion = () => {
-    const questionDiv = document.getElementById("question");
-    const optionsDiv = document.getElementById("options");
-
-    const question = quizData[currentQuestion];
-    if(questionDiv){questionDiv.innerText = question.question};
-    if(optionsDiv){optionsDiv.innerHTML = "";}
-
+        const questionDiv = document.getElementById("question");
+        const optionsDiv = document.getElementById("options");
     
-    question.options.forEach(option => {
-        const button = document.createElement("button");
-        button.innerText = option;
-        button.classList.add("selection");
-        if(optionsDiv){optionsDiv.appendChild(button)};
-        button.addEventListener("click", buttonSelected);
-    });        
-}
+        const question = quizData[currentQuestion];
+        if(questionDiv){questionDiv.innerText = question.question;}
+        if(optionsDiv){optionsDiv.innerHTML = "";}
+    
+        
+        question.options.forEach(option => {
+            const button = document.createElement("button");
+            button.innerText = option;
+            button.classList.add("selection");
+            if(optionsDiv){optionsDiv.appendChild(button);}
+            button.addEventListener("click", buttonSelected);
+        });        
+  };
 /* This functions allows for a transition into the next question when an option is selected. 
 While also updating the current question and score variable. It also changes the background
 image and updates the lines at the top of the page*/ 
@@ -72,37 +71,37 @@ const buttonSelected = (e) => {
         }
     
     if(currentQuestion < quizData.length - 1){
-        currentQuestion++
-        setTimeout(() => {presentQuestion();},500)
+        currentQuestion++;
+        setTimeout(() => {presentQuestion();},500);
         
     } else{
-        setTimeout(() => {presentResults()}, 500);
+        setTimeout(() => {presentResults();}, 500);
     }
     localStorage.setItem('correctAnswers', JSON.stringify(correctAnswers));
     switch(currentQuestion){
     case 1:
-        transitionQuiz("q1","q2", "two")
+        transitionQuiz("q1","q2", "two");
         break;
     case 2:
-        transitionQuiz("q2","q3","three")
+        transitionQuiz("q2","q3","three");
         break;
     case 3:
-        transitionQuiz("q3","q4","four")
+        transitionQuiz("q3","q4","four");
         break;
     case 4:
-        transitionQuiz("q4","q5","five")
+        transitionQuiz("q4","q5","five");
         break;                
    }
    const question = document.getElementById("current");
-   question.innerHTML = ""
-   question.innerHTML = `${currentQuestion + 1}`
+   question.innerHTML = "";
+   question.innerHTML = `${currentQuestion + 1}`;
 
-}
+};
 /* This function is used to transition between questions. It changes the background image, adds the moving
 black screen animation and also updates the lines on top of the page */
 const transitionQuiz = (currentQuestion, nextQuestionClass, lineId) => {
     transition2_el.classList.add("is-active");
-    const quizBg = document.getElementById("quiz")
+    const quizBg = document.getElementById("quiz");
     setTimeout(() => {
         transition2_el.classList.remove('is-active');
     }, 1700);
@@ -113,7 +112,7 @@ const transitionQuiz = (currentQuestion, nextQuestionClass, lineId) => {
         line.classList.add("solid");
         
     }, 500);
-}
+};
 // This variable acts as a container for adding the correct answers that are given by the user
 const correctAnswers = [];
 // This array contains possible feedback for the user
@@ -128,8 +127,8 @@ const feedback = [
 // This function is used to present the results to the user
 const presentResults = () => {
     const quizBg = document.getElementById("quiz");
-    quiz.classList.remove("q5");
-    quiz.classList.add("results");
+    quizBg.classList.remove("q5");
+    quizBg.classList.add("results");
     quizBg.innerHTML = ``;
     if (score >= 0 && score <= 5) {
         const feedbackMessage = feedback[score];
@@ -144,7 +143,7 @@ const presentResults = () => {
     quizBg.innerHTML += `
     <button id="ch-btn" class="ch-btn">Challenge A Friend</button>
     <p class="your-answers" id="your-answers">Correct Answers:<p>
-    <a href="answers.html"><button id="your-answers-btn" class="answers">+</button></a>`
+    <a href="answers.html"><button id="your-answers-btn" class="answers">+</button></a>`;
     const chBtn = document.getElementById("ch-btn");
     chBtn.addEventListener("click", () => {
         chBtn.classList.add("hide");
@@ -166,7 +165,26 @@ const presentResults = () => {
         aria-label="Share your results on Outlook(opens in a new tab) rel="noopener">
         <i class="fa-solid fa-square-envelope fa-xl m"></i>
         </a>
-        </div>`
-        yourAnswers.insertAdjacentHTML("beforebegin",socials)
-    })
-}
+        </div>`;
+        yourAnswers.insertAdjacentHTML("beforebegin",socials);
+    });
+};
+/*This function is used to display the answers to the user and to show the user
+ which question the user answered correctly*/
+const presentAnswers = () => {
+    const answerDiv = document.getElementById("answers");
+    const correctAnswers = JSON.parse(localStorage.getItem('correctAnswers'));
+    quizData.map((question) => {
+        answerDiv.innerHTML += `
+        <div style="display:flex; flex-direction: row;">
+        <div class="presentation">
+        <p class="question-answer">Q${quizData.indexOf(question) + 1}. ${question.question}</p>
+        <p style="font-weight: bolder">Correct Answer: ${question.answer}</p>
+        </div>
+        ${correctAnswers.includes(question.answer) ? '<i class="fa-regular fa-circle-check green-cross"></i>' : 
+        '<i class="fa-regular fa-circle-xmark red-cross"></i>'
+         }
+        </div>`;
+    });
+};
+presentQuestion();
