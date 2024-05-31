@@ -5,6 +5,8 @@
     --black: black;
     --white: aliceblue;
     --greyblue: #36454F;
+    --blue: #3b5998;
+    --green: #25D366;
 }
 /*This here makes the content of the page fill out the screen and also setting the font*/
 body, html{
@@ -109,4 +111,118 @@ is styled */
     height: 1.5rem;
     text-align: center;
     border-radius: 0.2rem;
+}
+/*Background image for results*/
+.results{
+    background: url(../images/SirAlex.webp) center/cover no-repeat, rgba(0, 0, 0, 0.5);
+}
+/*Styling the content for the results such as feedback, score, challenge a friend button etc*/
+.statement{
+    margin-top: 0;
+    text-transform: capitalize;
+    font-weight: bolder;
+    text-align: center;
+}
+.outcome{
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+.score {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 4rem;
+    font-family: sans-serif;
+    border: 0.2rem solid var(--white);
+    border-radius: 50%;
+    padding: 3rem;
+}
+
+.statement:after {
+    content: "";  
+    display: block;
+    margin: 0 auto;
+    width: 7rem;
+    padding-top: 1rem;
+    border-bottom: 1.5px solid var(--lightred);
+}
+
+.statement:before {
+    content: ""; 
+    display: block;
+    margin: 0 auto;
+    width: 7rem;
+    margin-bottom: 0.7rem;
+    border-bottom: 1.5px solid var(--lightred);
+}
+.ch-btn{
+    width: 12rem;
+    height: 3rem;
+    font-family: inherit;
+    border-color: var(--lightred);
+    letter-spacing: 0.08rem;
+    color: inherit;
+    background-color: var(--lightred);
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.ch-btn:hover{
+    background-color: var(--darkred);
+}
+/*This hides the challenge btn when clicked to allow user to view socials box*/
+.hide{
+    display:none;
+}
+/*This is a container containing icons for different social media sites*/
+.socials-box{
+    width: 15rem;
+    height: 3rem;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+}
+/*Styling for each social media icon*/
+.f{
+    color: var(--blue);
+    cursor: pointer;
+}
+.x{
+    color: var(--black);
+    cursor: pointer;
+}
+.w{
+    color: var(--green);
+    cursor: pointer;
+}
+.m{
+    color: var(--black);
+    cursor: pointer;
+}
+.m:hover{
+    color: var(--greyblue);
+}
+/*This is styling for the button that sends you to the answers page*/
+.your-answers{
+    margin-bottom: -0.5rem;
+}
+.answers {
+    color: var(--white);
+    border-radius: 50%;
+    border: var(--white) 1.6px solid;
+    background-color: transparent;
+    cursor: pointer;
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 1.2rem;
+}
+.answers:hover{
+    background-color: var(--darkred);
 }
