@@ -40,7 +40,18 @@ body, html{
 .q1{
     background-image: url(../images/cr7wallpaper.webp);
 }
-
+.q2{
+    background-image: url(../images/ManUtdSky\ \(compressed\).webp);
+}
+.q3{
+    background-image: url(../images/ManUtdCelebration.webp);
+}
+.q4{
+    background-image: url(../images/Berbatov08.webp);
+}
+.q5{
+    background-image: url(../images/ManUtdGround.webp);
+}
 /*Here the questions and options styles are set*/
 .question{
     font-size: larger;
