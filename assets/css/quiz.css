@@ -226,3 +226,101 @@ is styled */
 .answers:hover{
     background-color: var(--darkred);
 }
+/*These are the media queries for different screen sizes*/
+@media screen and (max-width: 450px){
+    .line{
+        width: 4rem;
+    }
+    .quiz{
+        font-size: small;
+    }
+    .selection{
+        width: 10rem;
+        height: 2rem;
+    }
+    .options{
+        margin-top: 2rem;
+        gap: 2rem;
+    }
+    .progress{
+        top: 3rem;
+    }
+    }
+@media screen and (min-width: 2500px) {
+    .line{
+        width: 26rem;
+        height: 4px;
+    }
+    .lines{
+        gap: 0.7rem;
+        margin-bottom: 0;
+        top: 7rem;
+    }
+    .progress{
+        top: 5rem;
+        width: 10rem;
+        height: 6rem;
+        font-size: 4rem;
+        border-radius: 2rem;
+    }
+    .question{
+        font-size: 4rem;
+    }
+    .selection{
+        width: 40rem;
+        height: 7.3rem;
+        border: var(--lightred) 3px solid;
+        font-size: 3rem;
+        border-radius: 4.5rem;
+    }
+    .options{
+        gap: 6rem;
+        margin-top: 10rem;
+    }
+    .statement{
+        margin-top: 4rem;
+        font-size: 7rem;
+    }
+    .statement:before{
+        width: 25rem;
+        border-bottom: 5px solid var(--lightred);
+    }
+    .statement:after{
+        width: 25rem;
+        border-bottom: 5px solid var(--lightred);
+    }
+    .outcome{
+        font-size: 4.5rem;
+        margin-bottom: 3rem;
+    }
+    .score{
+        margin-top: 6rem;
+        font-size: 15rem;
+        padding: 8rem;
+        border: 0.4rem solid var(--lightred);
+    }
+    .ch-btn{
+        margin-top: 6rem;
+        width: 38rem;
+        height: 9.5rem;
+        font-size: 2.9rem;
+        border-radius: 5rem;
+    }
+    .socials-box{
+        margin-top: 6rem;
+        width: 44rem;
+        height: 8rem;
+        font-size: 3.5rem;
+        gap: 3.5rem;
+    }
+    .your-answers{
+        font-size: 4rem;
+    }
+    .answers{
+        margin-top: 3rem;
+        height: 6rem;
+        width: 6rem;
+        font-size: 4rem;
+        border: var(--white) 5px solid;
+    }
+}
