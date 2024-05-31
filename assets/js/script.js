@@ -55,3 +55,41 @@ const presentQuestion = () => {
         button.addEventListener("click", buttonSelected);
     });        
 }
+/* This functions allows for a transition into the next question when an option is selected. 
+While also updating the current question and score variable. It also changes the background
+image and updates the lines at the top of the page*/ 
+const buttonSelected = (e) => {
+    const selectedButton = e.target;
+    const answer = quizData[currentQuestion].answer; 
+    if(selectedButton.innerText === answer){
+        score++;
+        correctAnswers.push(answer);
+        }
+    
+    if(currentQuestion < quizData.length - 1){
+        currentQuestion++
+        setTimeout(() => {presentQuestion();},500)
+        
+    } else{
+        setTimeout(() => {presentResults()}, 500);
+    }
+    localStorage.setItem('correctAnswers', JSON.stringify(correctAnswers));
+    switch(currentQuestion){
+    case 1:
+        transitionQuiz("q1","q2", "two")
+        break;
+    case 2:
+        transitionQuiz("q2","q3","three")
+        break;
+    case 3:
+        transitionQuiz("q3","q4","four")
+        break;
+    case 4:
+        transitionQuiz("q4","q5","five")
+        break;                
+   }
+   const question = document.getElementById("current");
+   question.innerHTML = ""
+   question.innerHTML = `${currentQuestion + 1}`
+
+}
