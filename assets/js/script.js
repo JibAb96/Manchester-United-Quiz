@@ -93,3 +93,19 @@ const buttonSelected = (e) => {
    question.innerHTML = `${currentQuestion + 1}`
 
 }
+/* This function is used to transition between questions. It changes the background image, adds the moving
+black screen animation and also updates the lines on top of the page */
+const transitionQuiz = (currentQuestion, nextQuestionClass, lineId) => {
+    transition2_el.classList.add("is-active");
+    const quizBg = document.getElementById("quiz")
+    setTimeout(() => {
+        transition2_el.classList.remove('is-active');
+    }, 1700);
+    setTimeout(() => {
+        quizBg.classList.remove(currentQuestion);
+        quizBg.classList.add(nextQuestionClass);
+        const line = document.getElementById(lineId);
+        line.classList.add("solid");
+        
+    }, 500);
+}
