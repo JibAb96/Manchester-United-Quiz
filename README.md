@@ -150,3 +150,6 @@ I had no bugs when deploying the website as I kept previewing the page and fixin
 ## Unfixed Bugs
 No unfixed bugs have been found.
 <hr>
+
+## Credits
+All the background images were sourced from <a href="https://www.wallpaperflare.com/" target="_blank">Wallpaper Flare</a>
