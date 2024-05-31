@@ -36,3 +36,22 @@ const transition2_el = document.querySelector('.transition-2');
 setTimeout(() => {
    if(transition2_el){transition2_el.classList.remove('is-active')};
                 }, 500);
+
+// This is the function which fills in the question and option container with data from the quizData array
+const presentQuestion = () => {
+    const questionDiv = document.getElementById("question");
+    const optionsDiv = document.getElementById("options");
+
+    const question = quizData[currentQuestion];
+    if(questionDiv){questionDiv.innerText = question.question};
+    if(optionsDiv){optionsDiv.innerHTML = "";}
+
+    
+    question.options.forEach(option => {
+        const button = document.createElement("button");
+        button.innerText = option;
+        button.classList.add("selection");
+        if(optionsDiv){optionsDiv.appendChild(button)};
+        button.addEventListener("click", buttonSelected);
+    });        
+}
