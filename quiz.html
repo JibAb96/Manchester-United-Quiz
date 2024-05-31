@@ -11,6 +11,23 @@
         <title>Manchester United Fan Quiz</title>
     </head>
     <body>
+        <!--The main container for the quiz-->
+        <div id="quiz" class="bg quiz q1 background-tint">
+            <!-- This div shows which question out of 5 the user is on-->
+            <div class="progress" id="progress"><span id="current">1</span>/5</div>
+            <!--This div has lines that indicate which question the user is on-->
+            <div class="lines">
+            <hr class="line solid">
+            <hr id="two" class="line">
+            <hr id="three" class="line">
+            <hr id="four" class="line">
+            <hr id="five" class="line">
+            </div>
+            <!--This is container for the questions-->
+            <div id="question" class="question"></div>
+            <!--The container for the options presented to the user as possible answers-->
+            <div id="options" class="options"></div>
+        </div>
         <script src="assets/js/script.js"></script>
     </body>
 </html>
