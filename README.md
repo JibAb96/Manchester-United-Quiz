@@ -126,3 +126,23 @@ I opened the terminal in my code editor and changed the current working director
 I had no bugs when deploying the website as I kept previewing the page and fixing any mistakes such as typos and css problems.
 
 <hr>
+
+## Validator Testing
+<ul>
+ <li>HTML - I used the official W3C validator and found no errors,</li>
+ The homepage
+ <img src="assets/images/W3C-index.png">
+ The quiz page
+ <img src="assets/images/W3C-quiz.png">
+ The answers page
+ <img src="assets/images/W3C-answers.png">
+ <li>CSS - I used the official Jigsaw validator and found no errors,</li>
+ The index.css, quiz.css, answers.css
+ <img src="assets/images/css-jigsaw.png">
+ <li>I ran the project through the lighthouse in devtools and found that my accessibilty rating was high.</li>
+ <img src="assets/images/dev-tools.png">
+ <li>Javascript - I used JSHint and found no warnings</li>
+ <img src="assets/images/js-hint.png">
+ </ul>
+
+<hr>
