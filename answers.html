@@ -9,8 +9,19 @@
         <link rel="stylesheet" href="assets/css/answers.css">
         <title>Manchester United Fan Quiz</title>
     </head>
-    <body>
-
+    <!--The body will be calling the presentAnswers function on load
+    to fill the page with the correct answers and icons indicating 
+    if the user got it correct-->
+    <body class="present-answers" onload="presentAnswers();">
+            <!--A transition div for a moving black screen-->
+            <div class="transition-3 is-active"></div>
+            <!--A div container with the title of the page and exit button-->
+            <div id="answers">
+                <a href="index.html" class="a" aria-label="exit-page">
+                    <i class="fa-regular fa-circle-xmark exit"></i>
+                </a>
+                <p class="answers-title">Answers: </p>
+            </div>
     </body>
         <script src="assets/js/script.js"></script>
         <script src="https://kit.fontawesome.com/a585228d22.js" crossorigin="anonymous"></script>
