@@ -109,3 +109,14 @@ const transitionQuiz = (currentQuestion, nextQuestionClass, lineId) => {
         
     }, 500);
 }
+// This variable acts as a container for adding the correct answers that are given by the user
+const correctAnswers = [];
+// This array contains possible feedback for the user
+const feedback = [
+    "Unlucky, you forgot your shooting boots at home!",
+    "Oh no, you missed the target completely.",
+    "Still got some work to do, until next time.",
+    "Well played, you performed better than most!",
+    "You're on fire, what a performance!",
+    "Perfect 5, take a bow!"
+];
