@@ -120,3 +120,48 @@ const feedback = [
     "You're on fire, what a performance!",
     "Perfect 5, take a bow!"
 ];
+// This function is used to present the results to the user
+const presentResults = () => {
+    const quizBg = document.getElementById("quiz");
+    quiz.classList.remove("q5");
+    quiz.classList.add("results");
+    quizBg.innerHTML = ``;
+    if (score >= 0 && score <= 5) {
+        const feedbackMessage = feedback[score];
+        const formattedFeedback = feedbackMessage.replace(/,/g, ",<br>");
+        quizBg.innerHTML = `
+            <h1 class="statement">${formattedFeedback}</h1>
+            <p class="outcome">You Scored ${score} out of 5</p>
+            <p class="score">${score}/5</p>`;
+    }
+    /* Here we have an option for the user to challenge a friend, through social media, to
+    beat his score */ 
+    quizBg.innerHTML += `
+    <button id="ch-btn" class="ch-btn">Challenge A Friend</button>
+    <p class="your-answers" id="your-answers">Correct Answers:<p>
+    <a href="answers.html"><button id="your-answers-btn" class="answers">+</button></a>`
+    const chBtn = document.getElementById("ch-btn");
+    chBtn.addEventListener("click", () => {
+        chBtn.classList.add("hide");
+        const yourAnswers = document.getElementById("your-answers");
+        const socials = `<div class="socials-box">
+        <a href="https://www.facebook.com" target="_blank" 
+        aria-label="Share your results on Facebook(opens in a new tab)" rel="noopener">
+        <i class="fa-brands fa-facebook fa-xl f"></i>
+        </a>
+        <a href="https://www.x.com" target="_blank" 
+        aria-label="Share your results on X(opens in a new tab) rel="noopener">
+        <i class="fa-brands fa-square-x-twitter fa-xl x"></i>
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank">
+        <i class="fa-brands fa-square-whatsapp fa-xl w" 
+        aria-label="Share your results on Whatsapp(opens in a new tab)" rel="noopener"></i>
+        </a>
+        <a href="https://www.outlook.com" target="_blank" 
+        aria-label="Share your results on Outlook(opens in a new tab) rel="noopener">
+        <i class="fa-solid fa-square-envelope fa-xl m"></i>
+        </a>
+        </div>`
+        yourAnswers.insertAdjacentHTML("beforebegin",socials)
+    })
+}
