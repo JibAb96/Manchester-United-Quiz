@@ -68,4 +68,13 @@ When the user clicks on the challenge button they have the options to message a 
 ### Correct Answers
 <img src="assets/images/correct-answers.png">
 When the user clicks on the correct answers button they are presented with the correct answers to the questions and also presented with either a green tick or red cross icon, depending on whether or not they answered the question correctly.
+
+<hr>
+
+## Accessibility
+I've been careful to try to make this website as accessible as possible. I've done this by:
+<li>Ensuring that I use the correct semantic HTML,</li>
+<li>Using the aria-label attribute when using icons,</li>
+<li>By using colors that have strong contrast.</li>
+
 <hr>
