@@ -146,3 +146,7 @@ I had no bugs when deploying the website as I kept previewing the page and fixin
  </ul>
 
 <hr>
+
+## Unfixed Bugs
+No unfixed bugs have been found.
+<hr>
