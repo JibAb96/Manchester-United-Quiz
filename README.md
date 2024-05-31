@@ -29,3 +29,14 @@ This website is designed to be an interactive quiz for fans of Manchester United
 <li>To partake in a quiz with different questions and topics</li>
 
 <hr>
+
+## Design 
+
+### Colour Scheme
+The colors I used are based on the Manchester United brand. These colors include: #DA291C, aliceblue, #AA291C, black etc.
+
+### Typography
+I used a google font by the name of Sedan to give the website a sophisticated look. 
+
+### Imagery
+I went out of my way to find high quality background images which are relevant to the topic of the quiz and to improve the aesthetics of the page.
