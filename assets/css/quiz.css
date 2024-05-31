@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&display=swap');
+:root{
+    --lightred: #DA291C;
+    --darkred: #AA291C;
+    --black: black;
+    --white: aliceblue;
+    --greyblue: #36454F;
+}
+/*This here makes the content of the page fill out the screen and also setting the font*/
+body, html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Sedan", sans-serif;
+    color: var(--white);
+}
+/*This sets the background image to be centred and covering the whole screen*/
+.bg {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/*This sets the page structre*/
+.quiz{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/*A dark tint to allow contrast between the background and content*/
+.background-tint{
+    background-color: rgba(0,0,0,.7);
+    background-blend-mode: multiply;
+}
+/*These are the different backgrounds depending on the questions the user is answering*/
+.q1{
+    background-image: url(../images/cr7wallpaper.webp);
+}
+
+/*Here the questions and options styles are set*/
+.question{
+    font-size: larger;
+    text-align: center;
+}
+.options{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.selection {
+    width: 12rem;
+    height: 2rem;
+    background-color: transparent;
+    border: var(--lightred) 1px solid;
+    border-radius: 1rem;
+    color: inherit;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.selection:hover {
+    background-color: var(--lightred);
+}
+/*Here the lines indicating which question the user is on 
+is styled */
+.lines{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: row;
+   gap: 0.3rem;
+   position: absolute;
+   top: 2rem;
+}
+.line{
+    width: 14rem;
+    height: 0.8px;
+    background-color: var(--white);
+    margin-bottom: 2rem;
+    opacity: .2;
+}
+.solid{
+    opacity: 1;
+}
+/*Here the numbers indicating which question the user is answering is styled*/
+.progress{
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    background-color: var(--greyblue);
+    width: 2.5rem;
+    height: 1.5rem;
+    text-align: center;
+    border-radius: 0.2rem;
+}
