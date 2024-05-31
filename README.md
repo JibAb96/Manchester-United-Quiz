@@ -40,3 +40,32 @@ I used a google font by the name of Sedan to give the website a sophisticated lo
 
 ### Imagery
 I went out of my way to find high quality background images which are relevant to the topic of the quiz and to improve the aesthetics of the page.
+
+<hr>
+
+## Features
+
+### Homepage
+<img src="assets/images/homepage.png">
+Here we have a full sized background-image instantly informing the user about the topic of choice for the page. We have a title informing the user of the function of this page. The 'Sedan' google font is used to give a sophisticated look. The line above the title and the button have been given colors inline with the Manchester United brand.
+<hr>
+
+
+### Quiz questions
+<img src="assets/images/question 1.png">
+<br>Here we have the beginning of the quiz with a background-image relevant to the topic. It allows the user to select an answer from the options given. Everytime a user selects an answer a new question is presented, the question number/line is updated and a new background-image appears. The lines ontop of the question are present for aesthetic purposes.
+<hr>
+
+### Results Page
+<hr>
+<img src="assets/images/results-page.png">
+Once the user has completed the quiz, the result page is presented with their score and some feedback. The user has the option to select the challenge button to challenge a friend and/or press the correct answers button to see the answer they got correct.
+
+### Challenge Button
+<img src="assets/images/Challnge-Button.png">
+When the user clicks on the challenge button they have the options to message a friend about the quiz on different social media platforms and challenge them.
+
+### Correct Answers
+<img src="assets/images/correct-answers.png">
+When the user clicks on the correct answers button they are presented with the correct answers to the questions and also presented with either a green tick or red cross icon, depending on whether or not they answered the question correctly.
+<hr>
