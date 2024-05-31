@@ -31,10 +31,15 @@ const quizData = [
 let currentQuestion = 0;
 // This variable keeps count of how many answers the user got correct
 let score = 0;
-
+/* These are two timeout functions which remove the black screen from the page creating an animation effect.
+This allows for the background image to have time to load*/
 const transition2_el = document.querySelector('.transition-2');
 setTimeout(() => {
    if(transition2_el){transition2_el.classList.remove('is-active')};
+                }, 500);
+const transition3_el = document.querySelector('.transition-3');
+setTimeout(() => {
+    transition3_el.classList.remove('is-active');
                 }, 500);
 
 // This is the function which fills in the question and option container with data from the quizData array
