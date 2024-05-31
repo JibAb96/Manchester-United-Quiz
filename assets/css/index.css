@@ -74,3 +74,26 @@ body, html{
   .transition-1.is-active {
     left: 0px;
   }
+  /*These are media queries to adjust the content for different screen sizes*/
+  @media screen and (max-width: 450px){
+    .Introduction{
+        font-size: 0.7rem;
+    }
+    .start-btn{
+        width: 7.5rem;
+        height: 3rem;
+    }
+  }
+
+  @media screen and (min-width: 2500px) {
+    .Introduction{
+        font-size: 3.5rem;
+        border-top: var(--lightred) 8px solid;
+    }
+    .start-btn{
+        width: 25rem;
+        height: 10rem;
+        font-size: 3.2rem;
+        border-radius: 6rem;
+    }
+  }
