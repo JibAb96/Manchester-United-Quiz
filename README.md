@@ -113,3 +113,11 @@ Inorder to Fork the Manchester United Fan Quiz repository I logged into GitHub, 
 I then clicked on the code button, selected whether I would like to clone with HTTPS, SSH or GitHub CLI and copied the link shown.
 I opened the terminal in my code editor and changed the current working directory to the location I wanted to use for the cloned directory. I then typed git clone into the terminal and then pasted the link I copied earlier. You need a http server installed.
 <hr>
+
+## Testing
+
+<br>I tested the page using different browsers including: Google Chrome, Firefox and Safari.
+<br>I loaded the page on different screen sizes to make sure it is responsive, aesthetically please and functioning.
+<br>I also made sure that font-sizes and colors are readable.
+<br>I completed the quiz multiple times to get every possible score and also every selection combination inorder to find any errors.
+<hr>
