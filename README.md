@@ -105,7 +105,7 @@ I used GitHub Pages to deploy the website. This is how I did it:
 <li>I found the Source section, then choose main from the drop down select branch menu. I then selected the Root from the drop down select folder menu.
 </li>
 <li>I then saved it and recieved a URL with the site deployed.</li>
- </ol><a href="https://jibab96.github.io/MUQuiz/">Manchester United Fan Quiz</a>
+ </ol><a href="https://jibab96.github.io/Manchester-United-Quiz/">Manchester United Fan Quiz</a>
 
  ### Local Deployment
 Inorder to Fork the Manchester United Fan Quiz repository I logged into GitHub, then found the Manchester United Fan Quiz repository and then clicked on the Fork button.
